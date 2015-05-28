@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>
+Square in Square
+</title>
+<style type = "text/css">
+body {
+  background: #040406;
+}
+
+canvas {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+</style>
+</head>
+<body>
+<canvas id='canv' width='500' height='500'></canvas>
+<script type = "text/javascript">
+var c = document.getElementById("canv");
+var ctx = c.getContext("2d");
+var w = c.width;
+var h = c.height;
+var square = 25;
+var grow = true;
+
+//draw square
+function drawSquare(offset) {  
+  ctx.strokeStyle = "cyan";
+  ctx.beginPath();
+  ctx.moveTo(w/2, offset);
+  ctx.lineTo(offset, h/2);
+  ctx.lineTo(w/2,h-offset);
+  ctx.lineTo(w-offset,h/2);
+  ctx.lineTo(w/2, offset);
+  ctx.stroke();
+  
+  if ((offset * 1.4) < 250) {
+    drawSquare(offset * 1.4)
+  }
+}
+
+function fillBackground() {
+  ctx.fillStyle = "#040406";
+  ctx.fillRect(0,0,h,w);
+}
+
+function checkGrow() {
+  if (square == 25) {
+    grow = true;
+  } else if (square == 100) {
+    grow = false;
+  }
+}
+
+setInterval(function(){
+  fillBackground();
+  if (grow) {
+    square += 1;
+    drawSquare(square);
+  } else {
+    fillBackground();
+    square -= 1;
+    drawSquare(square);
+  }
+  checkGrow();
+}, 20);
+</script>
+</body>
+</html>
