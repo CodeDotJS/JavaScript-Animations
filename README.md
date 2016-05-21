@@ -1,10 +1,7 @@
-# tenpack_transitions
-5 transitions which I coded in JavaScript along with HTML and CSS
+## JavaScript Animations
 
-Beautiful transitions coded in JavaScript + HTML + CSS
+> A small codebase for the animations/transitions I made using JavaScript.
 
-- In case the code isn't working properly in Firefox, use Chromium/Chrome
+## Usage
 
-- Some transitions are only supported in Firefox and some in Chrome/Chromium. 
-
-- Fork and make improvements. 
+> Download and check them.
