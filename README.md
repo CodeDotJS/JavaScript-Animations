@@ -1,6 +1,6 @@
 ## JavaScript Animations
 
-> A small codebase for the animations/transitions I made using JavaScript.
+> A small codebase for the animations/transitions I tried creating by taking help from others code when I was learning about canvas.
 
 ## Usage
 
